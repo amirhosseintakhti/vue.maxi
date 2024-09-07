@@ -17,7 +17,13 @@
         <li v-for="goal in goals">{{goal}}</li>
       </ul>
     </div>
+    <div id="tamrin">
+      <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+      <p>Using text interpolation: {{ rawHtml }}</p>
+
+    </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
+    <script src="tamrin.js"></script>
   </body>
 </html>
