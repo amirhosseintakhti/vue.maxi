@@ -8,7 +8,27 @@
 </head>
 <body>
     <div id="app">
-        <form action="" @submit></form>
+        <div class="myDiv">
+             <form action="" @submit>
+            <p>what do you need?<br>
+                <input type="text" required placeholder="item name" v-model="itemName">
+            </p>
+            <p>
+                How many? <br>
+                <input type="number" placeholder="number of items.." v-model="itemNumber">
+              </p>
+            
+        </form>
+        </div>
+       
     </div>
+
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+
+    </script>
 </body>
 </html>
