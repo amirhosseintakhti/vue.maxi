@@ -16,4 +16,18 @@
         </div>
     </div>
 </body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script >
+    const app = Vue.creataApp({
+        data(){
+            return{
+            boxASelected:false, 
+            boxBSelected:false,
+            boxCSelected:false, 
+            };
+           
+        },
+    })
+    app.mount('#style')
+</script>
 </html>
