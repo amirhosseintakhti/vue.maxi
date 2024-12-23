@@ -1,0 +1,155 @@
+<template>
+    <div id="app">
+      <!-- Header Section -->
+      <header class="header">
+        <h1>Welcome to My Personal Website</h1>
+        <nav>
+          <a href="#about">About Me</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+  
+      <!-- About Me Section -->
+      <section id="about" class="section about">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm [Your Name], a passionate [Your Profession]. I specialize in
+          [Your Skills/Technologies]. I love creating amazing projects and sharing
+          my knowledge with others.
+        </p>
+      </section>
+  
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="section portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-items">
+          <div v-for="(project, index) in portfolio" :key="index" class="portfolio-item">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <a :href="project.link" target="_blank">View Project</a>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Contact Section -->
+      <section id="contact" class="section contact">
+        <h2>Contact Me</h2>
+        <form @submit.prevent="submitForm">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" v-model="form.name" required />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" v-model="form.email" required />
+          </div>
+          <div>
+            <label for="message">Message:</label>
+            <textarea id="message" v-model="form.message" required></textarea>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        portfolio: [
+          { title: "Project 1", description: "Description of project 1", link: "#" },
+          { title: "Project 2", description: "Description of project 2", link: "#" },
+          { title: "Project 3", description: "Description of project 3", link: "#" },
+        ],
+        form: {
+          name: "",
+          email: "",
+          message: "",
+        },
+      };
+    },
+    methods: {
+      submitForm() {
+        alert(
+          `Thank you, ${this.form.name}! Your message has been sent. I'll get back to you at ${this.form.email}.`
+        );
+        this.form.name = "";
+        this.form.email = "";
+        this.form.message = "";
+      },
+    },
+  };
+  </script>
+  
+  <style>
+  /* Basic Styling */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+  }
+  
+  .header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  .section {
+    padding: 40px;
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .portfolio-items {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .portfolio-item {
+    flex: 1 1 calc(33% - 20px);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  form button {
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  </style>
+  
