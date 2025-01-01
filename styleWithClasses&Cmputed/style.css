@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+  }
+* {
+    box-sizing: border-box;
+  } 
+#style{
+    
+    margin: 3rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 18px;
+    text-align: center;
+}
+.demo{
+    width: calc(100% - 32px);
+    height: 100px;
+    margin: 16px;
+    border: 2px dashed #ccc;  
+
+}
+.active{
+  border-color: red;
+  background-color: salmon;
+}
