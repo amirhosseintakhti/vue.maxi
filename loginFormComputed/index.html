@@ -19,7 +19,7 @@
         <div class="container">
           <label for="email"><b>email</b></label>
           <input type="text" placeholder="email" name="email" v-model="email" />
-          <p class="has-error" style="display: none;"></p>
+          <p :class="{'has-error' : hasEmailError[0]}" style="display: none;" v-text="hasEmailError[1]"></p>
 
           <label for="psw"><b>Password</b></label>
           <input
@@ -28,7 +28,7 @@
             name="pass"
             v-model="pass"
           />
-          <p class="has-error" style="display:none ;"></p>
+          <p :class="{'has-error' : hasPasError[0]}" style="display:none ;" v-text="hasPasError[1]"></p>
 
 
           <button type="submit">Login</button>
@@ -52,6 +52,12 @@
             if (this.emailIsValid(email)) return [false, null];
             else return [true, "فرمت ایمیل وارد شده نادرست است"];
           },
+          hasPasError(){
+            let pass =this.pass;
+            if(pass.length < 8)
+            return [true ,'حد اقل ۸ کارکتر']
+        else return[false,null]
+          }
         },
         methods: {
           formhandle() {

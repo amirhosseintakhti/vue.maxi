@@ -38,5 +38,5 @@ img.avatar {
 .has-error{
   color: red;
   font-size: 0.7rem;
-  
+  display: block !important;
 }
