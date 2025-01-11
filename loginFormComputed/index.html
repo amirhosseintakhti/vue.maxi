@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.css" />
     <title>Document</title>
-</head>
-<body>
-    <h2>Login Form</h2>
-     <form @submit.prevent="formhandle">    <!-- با نوشتن formhandle بدون پرانتز، ما به Vue.js می‌گوییم که این متد را به‌عنوان هندلر رویداد submit در نظر بگیرد. -->
+  </head>
+  <body>
+    <div id="app">
+      <h2>Login Form</h2>
+      <form @submit.prevent="formhandle">
+        <!-- با نوشتن formhandle بدون پرانتز، ما به Vue.js می‌گوییم که این متد را به‌عنوان هندلر رویداد submit در نظر بگیرد. -->
         <div class="imgcontainer">
-            <img src="src/avatar.png" alt="avatar" class="avatar">
-          </div>
+          <img src="src/avatar.png" alt="avatar" class="avatar" />
+        </div>
 
-          <div class="container">
-            <label for="email"><b>email</b></label>
-            <input type="text" placeholder="email" name="email" v-model="email" >
-        
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="pass" v-model="pass">
-                
-            <button type="submit">Login</button>
-          </div>
-    </form>
+        <div class="container">
+          <label for="email"><b>email</b></label>
+          <input type="text" placeholder="email" name="email" v-model="email" />
+          <p class="has-error" style="display: none;"></p>
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="pass"
+            v-model="pass"
+          />
+          <p class="has-error" style="display:none ;"></p>
 
 
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <script>
-        const app = Vue.createApp({
-            data(){
-                return {
-                    email:'', 
-                    pass:''
-
-                };
-            },
-            computed:{
-
-            },
-            methods:{
-                formhandle(){
-                    console.log(this.email , this.pass)
-                },
-                emailIsValid(){
-                    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email);
-                }
-
-            }
-        })
+      const app = Vue.createApp({
+        data() {
+          return {
+            email: "",
+            pass: "",
+          };
+        },
+        computed: {
+          hasEmailError() {
+            let email = this.email;
+            if (this.emailIsValid(email)) return [false, null];
+            else return [true, "فرمت ایمیل وارد شده نادرست است"];
+          },
+        },
+        methods: {
+          formhandle() {
+            console.log(this.email, this.pass);
+          },
+          emailIsValid() {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email);
+          },
+        },
+      });
+      app.mount("#app");
     </script>
-</body>
+  </body>
 </html>
