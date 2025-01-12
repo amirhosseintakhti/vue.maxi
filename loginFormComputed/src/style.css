@@ -36,7 +36,11 @@ img.avatar {
   margin: 24px 0 12px 0;
 }
 .has-error{
-  color: red;
   font-size: 0.7rem;
-  display: block !important;
+  display: block!important;
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  align-items: center;
 }
