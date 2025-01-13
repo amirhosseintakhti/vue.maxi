@@ -5,7 +5,6 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.port": 5501,
-		"liveServer.settings.multiRootWorkspaceName": "vue.maxi"
+		"liveServer.settings.port": 5501
 	}
 }
