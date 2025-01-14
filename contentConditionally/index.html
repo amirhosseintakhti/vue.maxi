@@ -13,9 +13,9 @@
     </header>
     <div id="app">
         <h2>my goals</h2>
-        <input type="text" v-model="goals">
+        <input type="text" v-model="goalValue">
         <button @click="addGoal">Add Goal</button>
-        <p v-if=""></p>
+        <p v-if="goals.length === 0"> please add goal</p>
     </div>
 
 
