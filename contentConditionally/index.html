@@ -16,6 +16,9 @@
         <input type="text" v-model="goalValue">
         <button @click="addGoal">Add Goal</button>
         <p v-if="goals.length === 0"> please add goal</p>
+        <ul>
+            <li v-for="(goal, index) in goals" :key="index">{{ goal }}</li>
+        </ul>
     </div>
 
 
