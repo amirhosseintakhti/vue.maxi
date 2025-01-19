@@ -11,21 +11,21 @@ header{
 
     border-radius: 10px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.26);
-    margin: 3rem auto;
+    margin: 1rem auto;
     background-color: #4F5D75;
     color: #ffff;
-    max-width: 30rem;
+    max-width: 20rem;
     text-align: center;
     padding: 1rem;
 }
 #app {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    margin: 3rem auto;
+    margin: 1rem auto;
     border-radius: 10px;
     padding: 0.2rem;
     text-align: center;
     width: 90%;
-    max-width: 30rem;
+    max-width: 20rem;
   }
   #app h2{
     color: #4F5D75;
