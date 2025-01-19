@@ -3,6 +3,12 @@ const app = Vue.createApp({
     return {
       goalValue: "",
       goals: [],
+      myObject: {
+        title: 'How to do lists in Vue',
+        author: 'Jane Doe',
+        publishedAt: '2016-04-10'
+      },
+
     };
   },
   methods: {

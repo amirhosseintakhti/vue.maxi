@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>content conditionally <br>start</h1>
+      <h1>content conditionally <br />start</h1>
     </header>
     <div id="app">
-        <h2>my goals</h2>
-        <input type="text" v-model="goalValue">
-        <button @click="addGoal">Add Goal</button>
-        <p v-if="goals.length === 0"> please add goal</p>
+      <h2>my goals</h2>
+      <input type="text" v-model="goalValue" />
+      <button @click="addGoal">Add Goal</button>
+      <p v-if="goals.length === 0">please add goal</p>
+      <ul>
+        <li v-for="(goal, index) in goals">{{ goal }} - {{index}}</li>
+      </ul>
+
+      <!-- v-for with an Object -->
+      <!-- 
         <ul>
-            <li v-for="(goal, index) in goals" >{{ goal }} - {{index}} </li>
-        </ul>
+            <li v-for="(value , key) in myObject">
+             {{key}}:{{ value }}
+            </li>
+          </ul> -->
     </div>
-
-
-
-
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
