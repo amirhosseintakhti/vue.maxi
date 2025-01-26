@@ -6,18 +6,41 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
   </head>
   <body>
+    <div id="game">
+      <div class="character">
+        <h2>Monster</h2>
+        <img src="assets/monster.png" alt="Monster" />
+        <div class="health-bar">
+          <div
+            class="health-bar-value"
+            :style="{ width: monsterHealth + '%' }"
+          ></div>
+        </div>
+      </div>
 
-    <div>
+      <div class="character">
+        <h2>Player</h2>
+        <img src="assets/player.png" alt="Player" />
+        <div class="health-bar">
+          <div
+            class="health-bar-value"
+            :style="{ width: playerHealth + '%' }"
+          ></div>
+        </div>
+      </div>
 
+      <div class="actions">
+        <button @click="attackMonster">Attack</button>
+        <button @click="specialAttack">Special Attack</button>
+        <button @click="healPlayer">Heal</button>
+      </div>
     </div>
-    <div class="healthbar_value" :style="{with: monsterHelath + '%' }"></div>
 
-    <button @click="attackMonster">attack</button>
 
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
