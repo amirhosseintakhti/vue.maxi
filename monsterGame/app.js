@@ -24,11 +24,11 @@ Vue.createApp({
           this.monsterHealth -= attackValue; 
           this.attackPlayer();
         },
-        // specialAttack() {
-        //   const attackValue = this.getRandomValue(10, 25);
-        //   this.monsterHealth = Math.max(this.monsterHealth - attackValue, 0);
-        //   this.attackPlayer();
-        // },
+        specialAttack() {
+            const attackValue = getRandomValue(10,25)
+            this.monsterHealth -=attackValue;
+            this.attackPlayer();
+        },
         // healPlayer() {
         //   const healValue = this.getRandomValue(8, 20);
         //   this.playerHealth = Math.min(this.playerHealth + healValue, 100);
