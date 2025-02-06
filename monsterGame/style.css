@@ -71,6 +71,13 @@ body {
   button:active {
     transform: scale(1);
   }
+  button:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    box-shadow: none;
+    color: #3f3f3f;
+    cursor: not-allowed;
+  }
 
   .actions {
     margin-top: 20px;
