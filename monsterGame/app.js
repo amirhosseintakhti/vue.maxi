@@ -25,8 +25,8 @@ Vue.createApp({
           this.attackPlayer();
         },
         specialAttack() {
-            const attackValue = getRandomValue(10,25)
-            this.monsterHealth -=attackValue;
+            const attackValue = getRandomValue(5 ,25)
+            this.monsterHealth -= attackValue;
             this.attackPlayer();
         },
         // healPlayer() {
