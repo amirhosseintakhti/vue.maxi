@@ -26,6 +26,13 @@ Vue.createApp({
         // you lost
       }
     },
+    monsterHealth(value) {
+      if(value<= 0 && this.playerHealth <= 0){
+        // draw
+      } else if (value <= 0){
+        // player win
+      }
+    }
   },
   methods: {
     attackMonster() {
