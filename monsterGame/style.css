@@ -52,16 +52,29 @@ body {
     }
   }
 
-  .result {
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #ffeb3b;
-    color: #333;
-    font-size: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+  /* CSS برای نمایش نتیجه بازی */
+#game .result {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.win {
+  background-color: #4caf50; /* سبز */
+}
+
+.lose {
+  background-color: #f44336; /* قرمز */
+}
+
+.draw {
+  background-color: #ffeb3b; /* زرد */
+}
+
 
   button {
     background: #ff5722;

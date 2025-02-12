@@ -19,6 +19,16 @@ Vue.createApp({
     playerBarStyles() {
       return { width: this.playerHealth + "%" };
     },
+    resultClass(){
+      if(this.winner === 'won'){
+        return 'win';
+      }else if(this.winner === 'draw'){
+        return 'draw'
+      }else if (this.winner === 'game over'){
+        return 'lose'
+      }
+
+    },
   },
   watch: {
     playerHealth(value) {
