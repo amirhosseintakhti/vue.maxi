@@ -13,10 +13,7 @@
         <h2>Monster</h2>
         <img src="assets/monster.png" alt="Monster" />
         <div class="health-bar">
-          <div
-            class="health-bar-value"
-            :style="monsterBarStyles"
-          ></div>
+          <div class="health-bar-value" :style="monsterBarStyles"></div>
         </div>
       </div>
 
@@ -24,29 +21,24 @@
         <h2>Player</h2>
         <img src="assets/player.png" alt="Player" />
         <div class="health-bar">
-          <div
-            class="health-bar-value"
-            :style="playerBarStyles"
-          ></div>
+          <div class="health-bar-value" :style="playerBarStyles"></div>
         </div>
       </div>
 
       <div class="result" v-if="winner">
         <h3 v-if="winner === 'game over' ">game over</h3>
         <h3 v-if="winner ==='draw' ">lost</h3>
-        <h3  >won</h3>
+        <h3 v-if="winner === 'won' ">won</h3>
       </div>
-
 
       <div class="actions">
         <button @click="attackMonster">Attack</button>
-        <button :disabled="currentRound % 3 !== 0" @click="specialAttack">Special Attack</button> 
+        <button :disabled="currentRound % 3 !== 0" @click="specialAttack">
+          Special Attack
+        </button>
         <button @click="healPlayer">Heal</button>
-
       </div>
     </div>
-
-
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
