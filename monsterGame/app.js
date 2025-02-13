@@ -26,11 +26,11 @@ Vue.createApp({
       return { width: this.playerHealth + "%" };
     },
     resultClass(){
-      if(this.winner === 'won'){
+      if(this.winner === 'player'){
         return 'win';
       }else if(this.winner === 'draw'){
         return 'draw'
-      }else if (this.winner === 'game over'){
+      }else if (this.winner === 'monster'){
         return 'lose'
       }
 
@@ -42,7 +42,7 @@ Vue.createApp({
         this.winner = 'draw'
         // draw
       } else if (value <= 0) {
-        this.winner = 'game over'
+        this.winner = 'monster'
         // you lost
       }
     },
@@ -51,7 +51,7 @@ Vue.createApp({
         this.winner = 'draw'
         // draw
       } else if (value <= 0){
-        this.winner = 'won'
+        this.winner = 'player'
         // player win
       }
     }
@@ -90,5 +90,8 @@ Vue.createApp({
       const attackValue = getRandomValue(8, 15);
       this.playerHealth -= attackValue;
     },
+    surrender(){
+      this.winner = 'monster';
+    }
   },
 }).mount("#game");
