@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: tahoma ,serif;
+}
+h1{
+    text-align: center;
+    color: white;
+    background-color:#99e049;
+    border-radius: 10px;
+    height: 100px;
+    margin: 35px 45px;
+}

@@ -27,7 +27,7 @@
 
       <div v-if="winner" :class="['result', resultClass]">
         <h3 v-if="winner === 'monster' ">game over</h3>
-        <h3 v-if="winner ==='draw' ">lost</h3>
+        <h3 v-if="winner ==='draw' ">draw</h3>
         <h3 v-if="winner === 'player' ">won</h3>
         <button @click="startGame">start new game</button>
       </div>
