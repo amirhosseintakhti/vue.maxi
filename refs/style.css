@@ -16,16 +16,16 @@ h2{
 }
 
 #app div {
-    background-color: #83C5BE;
+    background-color: white;
     height: 250px;
     margin: 35px 45px;
     padding: 10px;
     border-radius: 12px;
-    box-shadow: 5px 10px 5px rgb(160, 161, 161);
+    box-shadow: 5px 5px 20px 2px rgb(160, 161, 161);
     text-align: center;
 }
 #app input{
-   border: none;
+   border: 1px solid gray;
    margin-top:30px ;
    border-radius: 8px;
    height: 30px;
@@ -40,4 +40,12 @@ h2{
 }
 #app button:hover{
     background-color:#E29578;
+}
+#app p{
+    text-align: center;
+    margin: 30px auto;
+    height: 50px;
+    color: white;
+    border-radius: 12px;
+    background-color: #83C5BE;
 }

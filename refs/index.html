@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>refs</title>
-
-</head>
-<body>
-    <h2 >Training ref</h2>
+  </head>
+  <body>
+    <h2>Training ref</h2>
     <div id="app">
-        <div>
-            <input type="text" >
-        <button @click="addText">add</button>
-        <p></p>
-        </div>
+      <div>
+        <input type="text" ref="userText" />
+        <button @click="setText">add</button>
+        <p>{{message}}</p>
+      </div>
     </div>
-</body>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
