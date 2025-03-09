@@ -15,6 +15,34 @@ const app = Vue.createApp({
         },
 
     },
+    beforeCreate(){
+        console.log('before create')
+    },
+    created(){
+        console.log('created')
+    },
+    beforeMount(){
+        console.log('before mount')
+    },
+    mounted(){
+        console.log('mounted')
+    },
+    beforeUpdate(){
+        console.log('beforeUpdate')
+    },
+    updated(){
+        console.log('updated')
+    },
+    beforeUnmount(){
+        console.log('beforeUnmount')
+    },
+    unmounted(){
+        console.log('unmounted')
+    }
 });
 
 app.mount('#app');
+setTimeout(function() {
+    app.unmount();
+}, 3000);
+
