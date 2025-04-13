@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js" defer></script>
+    <title>components</title>
+</head>
+<body>
+    <header>
+        <h1>friend list</h1>
+    </header>
+    <section id="app">
+        <ul>
+            <li v-for="friend in friends">
+                <h2>{{friend.name}}</h2>
+                <button>show list</button>
+                <ul>
+                    <li>{{friend.phone}}</li>
+                    <li>{{friend.email}}</li>
+                </ul>
+            </li>
+
+        </ul>
+    </section>
+
+</body>
+</html>
