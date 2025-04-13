@@ -15,7 +15,13 @@ const app = Vue.createApp({
           name: "ali takhti",
         },
       ],
+      detailAreVisblity:false,
     };
   },
+  methods:{
+    toggleDetails(){
+       this.detailAreVisblity = !this.detailAreVisblity;
+    }
+  }
 });
 app.mount("#app");
