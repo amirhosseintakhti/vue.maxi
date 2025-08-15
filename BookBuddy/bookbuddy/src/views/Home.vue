@@ -16,6 +16,19 @@ export default {
         return{
             books:[]
         }
+    },
+    created(){
+        const stored = localStorage.getItem('books')
+        this.books = stored ? JSON.parse(stored) : []
+    },
+    methods:{
+        addBook(book){
+            this.book.push(book)
+            localStorage.setItem('books', JSON.stringify(this.books))
+        },
+        toggleRead(id) {
+            
+        }
     }
 }
 </script>
