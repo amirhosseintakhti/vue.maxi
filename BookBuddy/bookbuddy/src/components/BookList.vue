@@ -18,5 +18,13 @@ export default {
 };
 </script>
 
-<style></style>
- 
+<style>
+.book-list {
+  list-style: none;
+  padding: 0;
+}
+
+.book-list li {
+  margin-bottom: 0.5rem;
+}
+</style>
